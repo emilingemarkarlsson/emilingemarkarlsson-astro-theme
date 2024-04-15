@@ -84,7 +84,7 @@ const siteConfig: SiteConfig = {
         },
         {
             text: 'Github',
-            href: 'https://github.com/emilingemarkarlsson/'
+            href: 'https://github.com/emilingemarkarlsson'
         },
     ],
     hero: {
