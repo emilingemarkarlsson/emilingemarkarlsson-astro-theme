@@ -9,8 +9,6 @@ seo:
 
 ![Project preview](/project-6.jpg)
 
-**When:** 2019
-
 ## Objectives
 
 The primary objective of this project was to transition from a reactive approach of merely resolving incoming support tickets to a more proactive stance. The goal was to actively work towards anticipating and preventing issues before they arise, ultimately improving the overall customer experience.
