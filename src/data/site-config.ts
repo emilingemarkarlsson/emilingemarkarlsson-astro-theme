@@ -89,7 +89,7 @@ const siteConfig: SiteConfig = {
     ],
     hero: {
         title: 'Welcome to My Playground!',
-        text: "Hi, my name is Emil Karlsson, and I work as a Project Manager in digital projects. **I am passionate about driving transformative change** that makes a difference.I love using **data analytics** and **AI**.",
+        text: "Hello, I’m Emil Karlsson, a Project Manager. My passion lies in harnessing data, analytics, and AI to drive informed decisions in my daily work.",
         image: {
             src: '/hero.jpg',
             alt: 'A person sitting at a desk'
