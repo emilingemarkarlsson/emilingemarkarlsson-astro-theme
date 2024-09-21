@@ -5,13 +5,26 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 
-
 export type Props = HeadProps & { showHeader?: boolean };
 
 const { showHeader = true, ...head } = Astro.props;
 ---
 
-<!doctype html>
+<script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+        c[a] =
+            c[a] ||
+            function () {
+                (c[a].q = c[a].q || []).push(arguments);
+            };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+    })(window, document, 'clarity', 'script', 'o6jc80qcdb');
+</script>
+
 <html lang="en" class="antialiased break-words">
     <head>
         <BaseHead {...head} />
