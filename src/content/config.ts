@@ -19,7 +19,7 @@ const blog = defineCollection({
         publishDate: z.coerce.date(),
         updatedDate: z.coerce.date().optional(),
         isFeatured: z.boolean().default(false),
-        tags: z.array(z.string()).default([]),
+        tags: z.array(z.string()).default([]), // Tags added here
         seo: seoSchema.optional()
     })
 });
@@ -37,6 +37,7 @@ const projects = defineCollection({
         description: z.string().optional(),
         publishDate: z.coerce.date(),
         isFeatured: z.boolean().default(false),
+        tags: z.array(z.string()).default([]), // Add tags to the projects schema
         seo: seoSchema.optional()
     })
 });
