@@ -5,7 +5,6 @@ publishDate: 'Jan 03 2017'
 tags:
   - Prototyping
   - Guide
-  - Guideddd
 
 isFeatured: true
 seo:

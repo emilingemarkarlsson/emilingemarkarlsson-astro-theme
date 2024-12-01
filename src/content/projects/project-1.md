@@ -3,7 +3,6 @@ title: 'The Digital Neighborhood Watch'
 description: TUVA was a comprehensive platform designed to bring neighbors together and foster peace of mind
 tags:
   - Prototyping
-  - Guidedddkkkk
 publishDate: 'Jan 01 2024'
 seo:
   image:
