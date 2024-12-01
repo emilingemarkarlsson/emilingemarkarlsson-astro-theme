@@ -47,4 +47,19 @@
         --color-border-main: 243 239 230;
     }
     */
+    .button-small {
+        font-size: 0.875rem; /* Smaller text size */
+        padding: 0.25rem 0.5rem; /* Reduced padding */
+        border-radius: 0.375rem; /* Rounded corners */
+        background-color: #0077cc; /* Your button color */
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.2s;
+    }
+    
+    .button-small:hover {
+        background-color: #005fa3; /* Darker color on hover */
+    }
 }

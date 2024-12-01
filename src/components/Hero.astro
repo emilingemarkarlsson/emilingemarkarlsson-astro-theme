@@ -4,10 +4,13 @@ import Button from './Button.astro';
 import siteConfig from '../data/site-config';
 
 const hero = siteConfig.hero;
+const socialLinks = siteConfig.socialLinks;
+const skills = siteConfig.skills;
+const experience = siteConfig.experience;
 ---
 
 {
-    (hero?.title || hero?.image?.src || hero?.text || (hero?.actions && hero.actions.length > 0)) && (
+    (hero?.title || hero?.image?.src || hero?.text || socialLinks?.length > 0) && (
         <section class="w-full flex flex-col gap-8 mb-16 sm:mb-24">
             {hero.title && <h1 class="text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight">{hero.title}</h1>}
             {hero.image?.src && (
@@ -17,10 +20,59 @@ const hero = siteConfig.hero;
                 </figure>
             )}
             {hero.text && <div class="max-w-none prose prose-dante sm:prose-lg" set:html={marked.parse(hero.text)} />}
-            {hero.actions && hero.actions.length > 0 && (
-                <div class="flex flex-wrap gap-4">
-                    {hero.actions.map((action) => (
-                        <Button href={action.href}>{action.text}</Button>
+            
+            <!-- Social Links Section -->
+            {socialLinks?.length > 0 && (
+                <div class="social-links mt-8">
+                    <h2 class="mb-4 text-lg font-serif italic sm:text-xl">Social</h2>
+                    <div class="flex gap-4 flex-wrap">
+                        {socialLinks.map((link) => (
+                            <Button href={link.href} size="default">{link.text}</Button>
+                        ))}
+                    </div>
+                </div>
+            )}
+            
+            <!-- Experience Section -->
+            {experience && (
+                <div class="experience mt-8">
+                    <h2 class="mb-4 text-lg font-serif italic sm:text-xl">Experience</h2>
+                    {experience.technical?.length > 0 && (
+                        <div class="technical mt-6">
+                            <h3 class="mb-4 font-medium text-base sm:text-lg">Technical Experience</h3>
+                            <div class="flex gap-4 flex-wrap">
+                                {experience.technical.map((item) => (
+                                    <Button size="default">{item}</Button>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                    {experience.leadership?.length > 0 && (
+                        <div class="leadership mt-6">
+                            <h3 class="mb-4 font-medium text-base sm:text-lg">Leadership Experience</h3>
+                            <div class="flex gap-4 flex-wrap">
+                                {experience.leadership.map((item) => (
+                                    <Button size="default">{item}</Button>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
+            )}
+            
+            <!-- Skills Section -->
+            {skills?.length > 0 && (
+                <div class="skills mt-8">
+                    <h2 class="mb-4 text-lg font-serif italic sm:text-xl">Skills</h2>
+                    {skills.map((skill) => (
+                        <div class="mb-6">
+                            <h3 class="mb-4 font-medium">{skill.category}</h3>
+                            <div class="flex gap-2 flex-wrap">
+                                {skill.items.map((item) => (
+                                    <Button size="small">{item}</Button>
+                                ))}
+                            </div>
+                        </div>
                     ))}
                 </div>
             )}
