@@ -22,15 +22,15 @@ seo:
 ## Features
 
 1. **Effective Invitation Model**
-    - Tuva Grannsamverkan used to provide an efficient invitation system where one user could easily invite the next user to join the neighborhood watch group.
-    - Invitations were sent via email, SMS, or through the platform itself, ensuring seamless onboarding for new participants.
+   - Tuva Grannsamverkan used to provide an efficient invitation system where one user could easily invite the next user to join the neighborhood watch group.
+   - Invitations were sent via email, SMS, or through the platform itself, ensuring seamless onboarding for new participants.
 2. **Map Overview**
-    - The platform used to offer a map overview that displayed which areas within the community were actively participating in Grannsamverkan.
-    - Users could see geographically marked zones where neighborhood watch activities were in progress, helping them identify areas of focus.
+   - The platform used to offer a map overview that displayed which areas within the community were actively participating in Grannsamverkan.
+   - Users could see geographically marked zones where neighborhood watch activities were in progress, helping them identify areas of focus.
 3. **Simple Reporting**
-    - Tuva Grannsamverkan simplified reporting incidents or suspicious activities.
-    - Users could easily submit reports about incidents, such as thefts, vandalism, or safety concerns, directly through the platform.
-    - The reporting process was straightforward, ensuring timely communication and coordination among neighbors.
+   - Tuva Grannsamverkan simplified reporting incidents or suspicious activities.
+   - Users could easily submit reports about incidents, such as thefts, vandalism, or safety concerns, directly through the platform.
+   - The reporting process was straightforward, ensuring timely communication and coordination among neighbors.
 
 ## Technology Stack
 
@@ -40,24 +40,23 @@ seo:
 - **Database**: Utilizing **mongoDB**.
 - **Hosting**: Deployed on **Heroku**.
 - **Other Tools**:
-    - **Tracking**: Leveraging **Mixpanel** and **Google Analytics**.
-    - **Invite Flow**: Integrated with **Twilio** for seamless communication.
+  - **Tracking**: Leveraging **Mixpanel** and **Google Analytics**.
+  - **Invite Flow**: Integrated with **Twilio** for seamless communication.
 
 ## Outcome
 
 We embarked on an exciting journey with an invitation model that rapidly attracted users. The network effect played a significant role, demonstrating how a growing user base can amplify value. However, challenges arose as you aimed to create a thriving community.
 
 1. **Rapid User Growth and Content Challenges**:
-    - The surge in users highlighted the power of the network effect.
-    - Despite daily users, maintaining engaging content proved difficult.
-    - Filling the platform with relevant material became a priority.
+   - The surge in users highlighted the power of the network effect.
+   - Despite daily users, maintaining engaging content proved difficult.
+   - Filling the platform with relevant material became a priority.
 2. **Scaling and Capital Needs**:
-    - As demands increased, transitioning from a solo endeavor to a team was essential.
-    - Raising capital became necessary but diverted focus from the product.
+   - As demands increased, transitioning from a solo endeavor to a team was essential.
+   - Raising capital became necessary but diverted focus from the product.
 3. **Revenue Models and Sustainability**:
-    - Promising revenue models emerged, but long-term sustainability remained elusive.
-    - The dilemma: continue raising capital without a proven business model.
+   - Promising revenue models emerged, but long-term sustainability remained elusive.
+   - The dilemma: continue raising capital without a proven business model.
 4. **Pivoting to Consulting**:
-    - Valuation challenges led to a strategic pivot.
-    - Consulting became a viable path, leveraging existing expertise.
-
+   - Valuation challenges led to a strategic pivot.
+   - Consulting became a viable path, leveraging existing expertise.

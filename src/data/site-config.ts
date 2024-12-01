@@ -9,7 +9,7 @@ const siteConfig: SiteConfig = {
     headerNavLinks: [
         { text: 'Home', href: '/' },
         { text: 'Projects', href: '/projects' },
-        { text: 'Blog', href: '/blog' },
+        // { text: 'Blog', href: '/blog' }, // Commented out to hide the Blog
         { text: 'Tags', href: '/tags' }
     ],
     footerNavLinks: [
@@ -33,7 +33,8 @@ const siteConfig: SiteConfig = {
         leadership: [
             'Customer Support Leader',
             'Infrastructure Service Manager',
-            'Project Management'
+            'Project Management',
+            'Ice Hockey Coach'
         ]
     },
     skills: [
