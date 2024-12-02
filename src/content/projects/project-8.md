@@ -1,6 +1,18 @@
 ---
 title: Customer-focused KPIs for better end-customer experience
 description: Empower your team to track and manage Key Performance Indicators effortlessly with our solution. Customize KPIs, receive real-time alerts, and integrate data seamlessly for a comprehensive overview of performance metrics
+tags:
+  - Business Intelligence
+  - Data Engineering
+  - Automation
+  - Customer Experience
+  - Real-Time Alerts
+  - Data Integration
+  - Data Visualization
+  - Performance Metrics
+  - Snowflake
+  - Databricks
+  - Power BI
 publishDate: 'Jan 08 2024'
 isFeatured: true
 seo:

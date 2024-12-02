@@ -1,6 +1,10 @@
 ---
 title: 'Reducing Food Waste'
-description:  Purchase surplus food from restaurants, cafés, and grocery stores at a reduced price.
+description: Purchase surplus food from restaurants, cafés, and grocery stores at a reduced price.
+tags:
+  - Django
+  - Python
+  - Bootstrap
 publishDate: 'Jan 04 2024'
 seo:
   image:
@@ -8,7 +12,6 @@ seo:
 ---
 
 ![Project preview](/project-4.jpg)
-
 
 ## Features
 
@@ -23,6 +26,7 @@ seo:
 - Backend: Implementing the server-side logic with Django (Python)
 
 ## Outcome
+
 Launched in Jönköping, Sweden and shortly after its release, the company behind it was acquired.
 
 **When:**

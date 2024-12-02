@@ -1,6 +1,17 @@
 ---
-title: Hockey Insights - Version 1
+title: Hockey Insights Dashboard
 description: A web-based tool for analyzing hockey performance at organizational, team, and individual levels using publicly available data. 🏒📊
+tags:
+  - Hockey Analytics
+  - Data Visualization
+  - Data Engineering
+  - Business Intelligence
+  - Cloud Platforms
+  - Azure
+  - Python
+  - Web Scraping
+  - Sports Analytics
+  - Performance Metrics
 publishDate: 'Jan 07 2024'
 isFeatured: true
 seo:
@@ -17,26 +28,26 @@ The Hockey Analytics Dashboard is designed to empower stakeholders within hockey
 ## Features
 
 1. **Organizational Level Insights:**
-    - **High-Level Trends**: The dashboard provides an overview of performance metrics for the entire organization. This includes win-loss ratios, goal differentials, and other relevant statistics.
-    - **Resource Allocation**: Analyze resource allocation (e.g., budget, coaching staff, facilities) and its impact on team performance.
-    - **Scouting and Recruitment**: Identify potential talent based on historical data and scouting reports.
+   - **High-Level Trends**: The dashboard provides an overview of performance metrics for the entire organization. This includes win-loss ratios, goal differentials, and other relevant statistics.
+   - **Resource Allocation**: Analyze resource allocation (e.g., budget, coaching staff, facilities) and its impact on team performance.
+   - **Scouting and Recruitment**: Identify potential talent based on historical data and scouting reports.
 2. **Team Level Insights:**
-    - **Performance Metrics**: Track team-specific metrics such as goals scored, shots on goal, penalty minutes, and power-play efficiency.
-    - **Game-by-Game Analysis**: Drill down into individual games to understand patterns, strengths, and weaknesses.
-    - **Line Combinations**: Evaluate the effectiveness of different player combinations (lines) during games.
-    - **Injury and Fatigue Monitoring**: Detect early signs of player fatigue or injury risk.
+   - **Performance Metrics**: Track team-specific metrics such as goals scored, shots on goal, penalty minutes, and power-play efficiency.
+   - **Game-by-Game Analysis**: Drill down into individual games to understand patterns, strengths, and weaknesses.
+   - **Line Combinations**: Evaluate the effectiveness of different player combinations (lines) during games.
+   - **Injury and Fatigue Monitoring**: Detect early signs of player fatigue or injury risk.
 3. **Individual Level Insights:**
-    - **Player Performance**: Assess individual player performance using advanced metrics (e.g., Corsi, Fenwick, expected goals).
-    - **Player Development**: Monitor player development over time, considering factors like age, position, and playing time.
-    - **Health and Fitness**: Track player fitness levels and recovery rates.
-    - **Scouting Reports**: Compare player statistics to historical benchmarks and identify areas for improvement.
+   - **Player Performance**: Assess individual player performance using advanced metrics (e.g., Corsi, Fenwick, expected goals).
+   - **Player Development**: Monitor player development over time, considering factors like age, position, and playing time.
+   - **Health and Fitness**: Track player fitness levels and recovery rates.
+   - **Scouting Reports**: Compare player statistics to historical benchmarks and identify areas for improvement.
 4. **Actionable Recommendations:**
-    - **Early Warning System**: Alert stakeholders to negative trends (e.g., declining performance, injury risk) so that timely corrective actions can be taken.
-    - **Strategic Adjustments**: Based on data-driven insights, recommend strategic changes (e.g., line adjustments, tactical shifts) to improve team performance.
-    - **Opponent Analysis**: Provide insights on opponents’ strengths and weaknesses to enhance game planning.
+   - **Early Warning System**: Alert stakeholders to negative trends (e.g., declining performance, injury risk) so that timely corrective actions can be taken.
+   - **Strategic Adjustments**: Based on data-driven insights, recommend strategic changes (e.g., line adjustments, tactical shifts) to improve team performance.
+   - **Opponent Analysis**: Provide insights on opponents’ strengths and weaknesses to enhance game planning.
 5. **Data Sources and Accessibility:**
-    - The dashboard relies on publicly available data, including official league statistics, player profiles, and historical records.
-    - Ensure ease of access for coaches, analysts, and management personnel.
+   - The dashboard relies on publicly available data, including official league statistics, player profiles, and historical records.
+   - Ensure ease of access for coaches, analysts, and management personnel.
 
 ## Technology Stack
 

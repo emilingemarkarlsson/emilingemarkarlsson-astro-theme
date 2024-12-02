@@ -1,6 +1,11 @@
 ---
 title: 'Quiz-Driven User Engagement and Conversion'
 description: Through extensive prototype testing, we uncovered valuable insights. Despite initial enthusiasm, user feedback revealed existing solutions meeting their needs more effectively.
+tags:
+  - Sketch
+  - User Feedback
+  - Iterative Design
+  - Customer Insights
 publishDate: 'Jan 03 2024'
 isFeatured: true
 seo:
@@ -9,7 +14,6 @@ seo:
 ---
 
 ![Project preview](/project-3.jpg)
-
 
 ## Objectives
 

@@ -1,6 +1,19 @@
 ---
 title: Building a Full Modern Data Stack for Just $10 a Month
 description: Learn how to design and implement a fully functional modern data stack with scalable, efficient, and secure data processing capabilities—all for just $10 a month. Discover how to leverage cloud-native tools, serverless architecture, and open-source technologies to optimize data ingestion, storage, transformation, and visualization, ensuring data quality, automation, and high performance for small to medium-scale projects. Perfect for personal projects or those looking for an affordable yet powerful data solution.
+tags:
+  - Data Engineering
+  - Cloud Platforms
+  - Data Science
+  - Automation
+  - Business Intelligence
+  - AI Tools
+  - Data Quality
+  - Data Governance
+  - Prototyping
+  - Orchestration
+  - Open Source
+  - Modern Data Stack
 publishDate: 'Sep 21 2024'
 isFeatured: true
 seo:

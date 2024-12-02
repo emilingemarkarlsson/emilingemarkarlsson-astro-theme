@@ -1,6 +1,13 @@
 ---
 title: 'Simplified Digital Ticket Sales'
 description: We crafted a modern solution to streamline ticketing processes, making it easier and more efficient for businesses and events to manage ticket sales.
+tags:
+  - Django
+  - Python
+  - Bootstrap
+  - Sketch
+  - Prototyping
+  - UX Design
 publishDate: 'Jan 02 2024'
 isFeatured: true
 seo:
