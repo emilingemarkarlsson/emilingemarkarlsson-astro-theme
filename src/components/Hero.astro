@@ -1,5 +1,6 @@
 ---
 import { marked } from 'marked';
+import Button from './Button.astro';
 import siteConfig from '../data/site-config';
 
 const hero = siteConfig.hero;
@@ -10,17 +11,13 @@ const experience = siteConfig.experience;
 
 {
     (hero?.title || hero?.image?.src || hero?.text || socialLinks?.length > 0) && (
-        <section class="w-full flex flex-col gap-8 mb-16 sm:mb-24">
-            {hero.title && (
-                <h1 class="text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight dotted-underline">
-                    {hero.title}
-                </h1>
-            )}
+        <section class="w-full flex flex-col gap-4 mb-12 sm:mb-16">
+            {hero.title && <h1 class="text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight">{hero.title}</h1>}
             
             {hero.image?.src && (
                 <figure>
                     <img class="w-full rounded-lg" src={hero.image.src} loading="lazy" decoding="async" alt={hero.image.alt || ''} />
-                    {hero.image.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{hero.image.caption}</figcaption>}
+                    {hero.image.caption && <figcaption class="mt-2 text-xs sm:text-sm">{hero.image.caption}</figcaption>}
                 </figure>
             )}
             
@@ -35,18 +32,11 @@ const experience = siteConfig.experience;
             
             <!-- Social Links Section -->
             {socialLinks?.length > 0 && (
-                <div class="social-links mt-8">
+                <div class="social-links mt-6">
                     <h2 class="mb-4 text-lg font-serif font-bold sm:text-xl">Social</h2>
-                    <div class="flex gap-4 flex-wrap">
+                    <div class="flex gap-3 flex-wrap">
                         {socialLinks.map((link) => (
-                            <a
-                                href={link.href || '#'}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="inline-flex items-center justify-center px-4 py-2 font-serif text-sm italic text-main bg-muted border border-main rounded-lg transition hover:bg-muted"
-                            >
-                                {link.text}
-                            </a>
+                            <Button href={link.href} size="default">{link.text}</Button>
                         ))}
                     </div>
                 </div>
@@ -54,34 +44,24 @@ const experience = siteConfig.experience;
             
             <!-- Experience Section -->
             {experience && (
-                <div class="experience mt-8">
+                <div class="experience mt-6">
                     <h2 class="mb-4 text-lg font-serif font-bold sm:text-xl">Experience</h2>
                     {experience.technical?.length > 0 && (
-                        <div class="technical mt-6">
-                            <h3 class="mb-4 font-medium text-base sm:text-lg">Technical Experience</h3>
-                            <div class="flex gap-4 flex-wrap">
+                        <div class="technical mt-4">
+                            <h3 class="mb-2 font-medium text-base sm:text-lg">Technical Experience</h3>
+                            <div class="flex gap-3 flex-wrap">
                                 {experience.technical.map((item) => (
-                                    <a
-                                        href="#"
-                                        class="inline-flex items-center justify-center px-4 py-2 font-serif text-sm italic text-main bg-muted border border-main rounded-lg transition hover:bg-muted"
-                                    >
-                                        {item}
-                                    </a>
+                                    <Button size="default">{item}</Button>
                                 ))}
                             </div>
                         </div>
                     )}
                     {experience.leadership?.length > 0 && (
-                        <div class="leadership mt-6">
-                            <h3 class="mb-4 font-medium text-base sm:text-lg">Leadership Experience</h3>
-                            <div class="flex gap-4 flex-wrap">
+                        <div class="leadership mt-4">
+                            <h3 class="mb-2 font-medium text-base sm:text-lg">Leadership Experience</h3>
+                            <div class="flex gap-3 flex-wrap">
                                 {experience.leadership.map((item) => (
-                                    <a
-                                        href="#"
-                                        class="inline-flex items-center justify-center px-4 py-2 font-serif text-sm italic text-main bg-muted border border-main rounded-lg transition hover:bg-muted"
-                                    >
-                                        {item}
-                                    </a>
+                                    <Button size="default">{item}</Button>
                                 ))}
                             </div>
                         </div>
@@ -91,18 +71,18 @@ const experience = siteConfig.experience;
             
             <!-- Skills Section -->
             {skills?.length > 0 && (
-                <div class="skills mt-8">
+                <div class="skills mt-6">
                     <h2 class="mb-4 text-lg font-serif font-bold sm:text-xl">Skills</h2>
                     {skills.map((skill) => (
-                        <div class="mb-6">
-                            <h3 class="mb-4 font-medium">{skill.category}</h3>
+                        <div class="mb-4">
+                            <h3 class="mb-2 font-medium">{skill.category}</h3>
                             <div class="flex gap-2 flex-wrap">
                                 {skill.items.map((item) => (
                                     <a
                                         href={item.url || '#'}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        class="inline-flex items-center justify-center px-4 py-2 font-serif text-sm italic text-main bg-muted border border-main rounded-lg transition hover:bg-muted"
+                                        class="inline-flex items-center justify-center px-4 py-2 font-serif text-sm italic text-main bg-muted border border-main rounded-lg transition hover:bg-main hover:text-white"
                                     >
                                         {item.text}
                                     </a>

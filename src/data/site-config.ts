@@ -81,8 +81,7 @@ const siteConfig = {
             items: [
                 { text: 'DataHub', url: 'https://datahubproject.io/' },
                 { text: 'Amundsen', url: 'https://www.amundsen.io/' },
-                { text: 'Alation', url: 'https://www.alation.com/' },
-                { text: 'Atlan', url: 'https://atlan.com/' },
+                { text: 'OpenMetadata', url: 'https://open-metadata.org' },
             ],
         },
         {
@@ -129,12 +128,8 @@ const siteConfig = {
                 { text: 'TensorFlow', url: 'https://www.tensorflow.org/' },
                 { text: 'PyTorch', url: 'https://pytorch.org/' },
                 { text: 'Spark MLlib', url: 'https://spark.apache.org/mllib/' },
-                { text: 'AWS Sagemaker', url: 'https://aws.amazon.com/sagemaker/' },
                 { text: 'Google Cloud AutoML', url: 'https://cloud.google.com/automl' },
                 { text: 'Azure Machine Learning AutoML', url: 'https://azure.microsoft.com/en-us/products/machine-learning/' },
-                { text: 'DataRobot', url: 'https://www.datarobot.com/' },
-                { text: 'Tabnine', url: 'https://www.tabnine.com/' },
-                { text: 'Kite', url: 'https://www.kite.com/' },
                 { text: 'OpenAI GPT API', url: 'https://openai.com/api/' },
                 { text: 'MidJourney', url: 'https://www.midjourney.com/' },
                 { text: 'DALL·E', url: 'https://openai.com/dall-e/' },

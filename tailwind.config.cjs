@@ -6,18 +6,18 @@ module.exports = {
     theme: {
         fontFamily: {
             sans: ['Inter', ...defaultTheme.fontFamily.sans],
-            serif: ['Newsreader', ...defaultTheme.fontFamily.serif],
+            serif: ['Newsreader', ...defaultTheme.fontFamily.serif]
         },
         extend: {
             textColor: {
-                main: 'rgb(var(--color-text-main) / <alpha-value>)',
+                main: 'rgb(var(--color-text-main) / <alpha-value>)'
             },
             backgroundColor: {
                 main: 'rgb(var(--color-bg-main) / <alpha-value>)',
-                muted: 'rgb(var(--color-bg-muted) / <alpha-value>)',
+                muted: 'rgb(var(--color-bg-muted) / <alpha-value>)'
             },
             borderColor: {
-                main: 'rgb(var(--color-border-main) / <alpha-value>)',
+                main: 'rgb(var(--color-border-main) / <alpha-value>)'
             },
             typography: (theme) => ({
                 dante: {
@@ -29,10 +29,13 @@ module.exports = {
                         '--tw-prose-hr': theme('borderColor.main'),
                         '--tw-prose-quotes': theme('textColor.main'),
                         '--tw-prose-pre-bg': theme('colors.zinc.800'),
-                    },
-                },
-            }),
-        },
+                        h2: {
+                            fontStyle: 'italic'
+                        }
+                    }
+                }
+            })
+        }
     },
-    plugins: [require('@tailwindcss/typography')],
+    plugins: [require('@tailwindcss/typography')]
 };
