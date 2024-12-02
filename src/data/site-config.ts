@@ -1,5 +1,5 @@
 const siteConfig = {
-    title: 'Emil I Karlsson',
+    title: 'Emil Ingemar Karlsson',
     subtitle: '',
     description: 'Emil Karlsson Playground Site',
     image: {
@@ -19,7 +19,7 @@ const siteConfig = {
     socialLinks: [
         { text: 'Goodreads', href: 'https://www.goodreads.com/emilingemarkarlsson' },
         { text: 'Github', href: 'https://github.com/emilingemarkarlsson' },
-        { text: 'Email', href: 'mailto:emilkarlsson@me.com' },
+        { text: 'Email', href: '/contact' }, // Changed Email to link to the Contact page
     ],
     experience: {
         technical: [
