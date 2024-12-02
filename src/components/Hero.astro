@@ -11,17 +11,15 @@ const experience = siteConfig.experience;
 {
     (hero?.title || hero?.image?.src || hero?.text || socialLinks?.length > 0) && (
         <section class="w-full flex flex-col gap-8 mb-16 sm:mb-24">
-            {hero.title && <h1 class="text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight">{hero.title}</h1>}
+            {hero.title && (
+                <h1 class="text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight dotted-underline">
+                    {hero.title}
+                </h1>
+            )}
             
             {hero.image?.src && (
                 <figure>
-                    <img
-                        class="w-full rounded-lg"
-                        src={hero.image.src}
-                        loading="lazy"
-                        decoding="async"
-                        alt={hero.image.alt || ''}
-                    />
+                    <img class="w-full rounded-lg" src={hero.image.src} loading="lazy" decoding="async" alt={hero.image.alt || ''} />
                     {hero.image.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{hero.image.caption}</figcaption>}
                 </figure>
             )}
@@ -35,16 +33,17 @@ const experience = siteConfig.experience;
                 </div>
             )}
             
+            <!-- Social Links Section -->
             {socialLinks?.length > 0 && (
                 <div class="social-links mt-8">
-                    <h2 class="mb-4 text-lg font-serif italic sm:text-xl">Social</h2>
+                    <h2 class="mb-4 text-lg font-serif font-bold sm:text-xl">Social</h2>
                     <div class="flex gap-4 flex-wrap">
                         {socialLinks.map((link) => (
                             <a
-                                href={link.href}
+                                href={link.href || '#'}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="inline-flex items-center justify-center px-4 py-2 font-serif text-sm italic text-main bg-muted rounded-lg transition hover:bg-main hover:text-white"
+                                class="inline-flex items-center justify-center px-4 py-2 font-serif text-sm italic text-main bg-muted border border-main rounded-lg transition hover:bg-muted"
                             >
                                 {link.text}
                             </a>
@@ -53,15 +52,19 @@ const experience = siteConfig.experience;
                 </div>
             )}
             
+            <!-- Experience Section -->
             {experience && (
                 <div class="experience mt-8">
-                    <h2 class="mb-4 text-lg font-serif italic sm:text-xl">Experience</h2>
+                    <h2 class="mb-4 text-lg font-serif font-bold sm:text-xl">Experience</h2>
                     {experience.technical?.length > 0 && (
                         <div class="technical mt-6">
                             <h3 class="mb-4 font-medium text-base sm:text-lg">Technical Experience</h3>
                             <div class="flex gap-4 flex-wrap">
                                 {experience.technical.map((item) => (
-                                    <a href="#" class="inline-flex items-center justify-center px-4 py-2 font-serif text-sm italic text-main bg-muted rounded-lg transition hover:bg-main hover:text-white">
+                                    <a
+                                        href="#"
+                                        class="inline-flex items-center justify-center px-4 py-2 font-serif text-sm italic text-main bg-muted border border-main rounded-lg transition hover:bg-muted"
+                                    >
                                         {item}
                                     </a>
                                 ))}
@@ -73,7 +76,10 @@ const experience = siteConfig.experience;
                             <h3 class="mb-4 font-medium text-base sm:text-lg">Leadership Experience</h3>
                             <div class="flex gap-4 flex-wrap">
                                 {experience.leadership.map((item) => (
-                                    <a href="#" class="inline-flex items-center justify-center px-4 py-2 font-serif text-sm italic text-main bg-muted rounded-lg transition hover:bg-main hover:text-white">
+                                    <a
+                                        href="#"
+                                        class="inline-flex items-center justify-center px-4 py-2 font-serif text-sm italic text-main bg-muted border border-main rounded-lg transition hover:bg-muted"
+                                    >
                                         {item}
                                     </a>
                                 ))}
@@ -83,9 +89,10 @@ const experience = siteConfig.experience;
                 </div>
             )}
             
+            <!-- Skills Section -->
             {skills?.length > 0 && (
                 <div class="skills mt-8">
-                    <h2 class="mb-4 text-lg font-serif italic sm:text-xl">Skills</h2>
+                    <h2 class="mb-4 text-lg font-serif font-bold sm:text-xl">Skills</h2>
                     {skills.map((skill) => (
                         <div class="mb-6">
                             <h3 class="mb-4 font-medium">{skill.category}</h3>
@@ -95,7 +102,7 @@ const experience = siteConfig.experience;
                                         href={item.url || '#'}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        class="inline-flex items-center justify-center px-4 py-2 font-serif text-sm italic text-main bg-muted rounded-lg transition hover:bg-main hover:text-white"
+                                        class="inline-flex items-center justify-center px-4 py-2 font-serif text-sm italic text-main bg-muted border border-main rounded-lg transition hover:bg-muted"
                                     >
                                         {item.text}
                                     </a>
