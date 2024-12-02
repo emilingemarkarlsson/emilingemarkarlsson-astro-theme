@@ -1,7 +1,7 @@
 const siteConfig = {
     title: 'Emil Ingemar Karlsson',
-    subtitle: '',
-    description: 'Emil Karlsson Playground Site',
+    subtitle: 'Based in Stockholm, Sweden',
+    description: 'Emil Karlsson Playground Site - Explore data engineering, project management, and hockey analytics.',
     image: {
         src: '/dante-preview.jpg',
         alt: 'Dante - Astro.js and Tailwind CSS theme',
@@ -19,7 +19,7 @@ const siteConfig = {
     socialLinks: [
         { text: 'Goodreads', href: 'https://www.goodreads.com/emilingemarkarlsson' },
         { text: 'Github', href: 'https://github.com/emilingemarkarlsson' },
-        { text: 'Email', href: '/contact' }, // Changed Email to link to the Contact page
+        { text: 'Email', href: '/contact' },
     ],
     experience: {
         technical: [
@@ -27,13 +27,14 @@ const siteConfig = {
             'Hockey Analytics',
             'B2B Commerce',
             'Infrastructure Management',
+            'Data Analytics',
             'GDPR and Privacy',
         ],
         leadership: [
-            'Customer Support Leader',
-            'Infrastructure Service Manager',
+            'Customer Support Management',
+            'Infrastructure Management',
             'Project Management',
-            'Ice Hockey Coach',
+            'Hockey Coaching',
         ],
     },
     skills: [
@@ -146,7 +147,7 @@ const siteConfig = {
     hero: {
         title: '',
         text: `
-            <p>I’m Emil Karlsson, a Project Manager and Data Engineer passionate about solving complex problems.</p>
+            <p>I’m Emil Karlsson, a Project Manager and Data Engineer based in Stockholm, Sweden, passionate about solving complex problems.</p>
             <p>I specialize in data pipelines, analytics, and team leadership.</p>
             <p>I thrive on collaboration and creativity, combining technical expertise with innovative thinking to deliver impactful solutions.</p>
             <p>Outside work, I enjoy analyzing hockey stats, coaching on the rink, and exploring the latest tech trends.</p>

@@ -2,7 +2,7 @@
 title: Contact
 seo:
   title: Contact Emil Karlsson
-  description: Get in touch with Emil Karlsson for collaboration, consultation, or inquiries about projects and data engineering.
+  description: Get in touch with Emil Karlsson, a Stockholm-based data engineer, project manager, and hockey analyst, for collaboration or inquiries.
   image:
     src: '/contact.jpeg'
     alt: Contact Emil Karlsson
@@ -10,14 +10,16 @@ seo:
 
 ## Get in Touch
 
-I'd love to hear from you! Whether you're interested in collaboration, consultation, or just a friendly chat, feel free to reach out.
+I’m Emil Karlsson, a data engineer, project manager, and hockey analyst based in Stockholm, Sweden. I’m always open to discussing new projects, collaborations, or ideas. Whether you’re looking for a partner to tackle a challenging project, need guidance on data pipelines, or simply want to connect, I’d love to hear from you.
 
 ### Ways to Contact Me:
 
-- **Email**: [emilkarlsson@me.com](mailto:emilkarlsson@me.com)
-- **GitHub**: [View my work](https://github.com/emilingemarkarlsson)
+- **Email**: [emilkarlsson@me.com](mailto:emilkarlsson@me.com)  
+  Feel free to send me an email anytime. I usually respond within 24-48 hours.
+- **GitHub**: [View my work](https://github.com/emilingemarkarlsson)  
+  Check out my projects and contributions in data engineering and analytics.
 
-Or use the form below to send me a message directly.
+If you prefer, use the contact form below to send me a message directly.
 
 ## Contact Form
 
@@ -41,8 +43,9 @@ Or use the form below to send me a message directly.
     "email": "mailto:emilkarlsson@me.com",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Nacka",
-      "addressRegion": "Stockholm"
+      "addressLocality": "Stockholm",
+      "addressRegion": "Stockholm",
+      "addressCountry": "Sweden"
     },
     "sameAs": [
       "https://github.com/emilingemarkarlsson"

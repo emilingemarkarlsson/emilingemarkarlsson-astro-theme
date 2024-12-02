@@ -16,7 +16,7 @@ tags:
   - Modern Data Stack
 publishDate: 'Sep 21 2024'
 isFeatured: true
-seo:
+seo:   
   image:
     src: '/project-9.png'
 ---

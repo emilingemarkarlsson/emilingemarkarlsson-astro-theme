@@ -1,60 +1,95 @@
 ---
 title: Terms of Service
 seo:
-  title: Terms of Service
-  description: Explore the terms and conditions of Dante website for a clear understanding of guidelines and responsibilities.
+  title: Terms of Service for Emil Ingemar Karlsson's Website
+  description: Review the terms and conditions for using Emil Ingemar Karlsson's website, including guidelines, responsibilities, and legal policies.
 ---
 
-Certainly! Here's a rewritten version of the terms and conditions for your personal website:
+_Last Updated: April 10, 2024_
+
+Welcome to Emil Ingemar Karlsson’s website (“the Website”). These Terms of Service ("Terms") outline the rules and guidelines for accessing and using the Website, operated by Emil Karlsson ("we," "us," or "our"). By accessing the Website, you agree to these Terms. If you do not agree, please do not use the Website.
 
 ---
-
-# Terms of Service
-
-Last updated: april 10, 2024
-
-These Terms of Service ("Terms") govern your access to and use of [Website Name] ("the Website") and any related services provided by [Website Owner/Company] ("we," "us," or "our"). Please carefully read these Terms before using the Website.
 
 ## 1. Acceptance of Terms
 
-By accessing or using the Website, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms or the Privacy Policy, please refrain from using the Website.
+By accessing or using the Website, you acknowledge that you have read, understood, and agree to these Terms and our [Privacy Policy](/privacy-policy). If you do not agree to any part of these Terms, you must refrain from using the Website.
 
-## 2. Changes to Terms
+---
 
-We reserve the right to modify, amend, or update these Terms at any time. Such changes will be effective upon posting on the Website. It is your responsibility to review these Terms regularly. Your continued use of the Website after any changes indicates your acceptance of the revised Terms.
+## 2. Modifications to Terms
 
-## 3. Use of the Website
+We reserve the right to update or revise these Terms at any time. Changes will be effective immediately upon posting on the Website. Your continued use of the Website after updates signifies your agreement to the revised Terms. Please check this page regularly for updates.
 
-You agree to use the Website for lawful purposes and in a manner consistent with these Terms. You are responsible for any content you post or submit on the Website.
+---
 
-## 4. Registration and Account
+## 3. Permitted Use
 
-Certain areas of the Website may require registration or the creation of an account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.
+You may use the Website for personal and non-commercial purposes in compliance with these Terms. You agree not to:
+- Engage in any unlawful or harmful activity.
+- Attempt to disrupt or harm the Website’s functionality.
+- Use automated systems (e.g., bots or scrapers) to access the Website without prior written permission.
 
-## 5. Content and Intellectual Property
+---
 
-The content on the Website, including text, graphics, logos, images, audio, video, software, and other materials, is owned or licensed by us and is protected by copyright and other intellectual property laws. You may not use, reproduce, or distribute the content without our prior written consent.
+## 4. Registration and Accounts
 
-## 6. Third-Party Links
+Certain sections of the Website may require you to register for an account. You agree to:
+- Provide accurate and complete information during registration.
+- Keep your account credentials confidential.
+- Notify us immediately of unauthorized use of your account.
 
-The Website may contain links to third-party websites or resources. We do not endorse and are not responsible for the content, products, or services provided by third parties. Your use of such websites is at your own risk.
+We are not liable for any loss or damage arising from unauthorized access to your account.
 
-## 7. Termination
+---
 
-We may, at our sole discretion, terminate or suspend your access to the Website at any time and for any reason, without notice.
+## 5. Intellectual Property Rights
 
-## 8. Disclaimer
+All content on the Website, including text, images, logos, videos, and software, is the property of Emil Karlsson or licensed to us. Unauthorized use, reproduction, or distribution of this content is strictly prohibited.
 
-The Website and its content are provided on an "as is" and "as available" basis. We make no warranties or representations about the accuracy or completeness of the content. We do not guarantee that the Website will be error-free or uninterrupted.
+You may:
+- Access and view content for personal use.
+- Share content with proper attribution and without modification.
+
+---
+
+## 6. Links to Third-Party Websites
+
+The Website may include links to external sites or services. We do not endorse, guarantee, or assume responsibility for third-party content, products, or services. Access third-party links at your own discretion and risk.
+
+---
+
+## 7. Termination of Use
+
+We reserve the right to suspend or terminate your access to the Website, without prior notice, for violations of these Terms or any applicable laws.
+
+---
+
+## 8. Disclaimer of Warranties
+
+The Website and its content are provided “as is” and “as available.” We do not guarantee the accuracy, reliability, or uninterrupted availability of the Website. Use of the Website is at your own risk.
+
+---
 
 ## 9. Limitation of Liability
 
-To the fullest extent permitted by law, we shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to damages for loss of profits, goodwill, use, data, or other intangible losses, arising out of or in connection with the use or inability to use the Website.
+To the maximum extent permitted by law, Emil Karlsson is not liable for any indirect, incidental, consequential, or punitive damages arising from:
+- Your use or inability to use the Website.
+- Errors or omissions in the content.
+- Any unauthorized access or breach of our security measures.
 
-## 10. Governing Law
-
-These Terms are governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of laws principles. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of [Your Jurisdiction].
-
-Thank you for reading our Terms of Service. By using the Website, you agree to be bound by these Terms.
 ---
 
+## 10. Governing Law and Jurisdiction
+
+These Terms are governed by the laws of [Your Jurisdiction], without regard to its conflict of law principles. Disputes related to these Terms shall be resolved exclusively in the courts of [Your Jurisdiction].
+
+---
+
+## 11. Contact Us
+
+If you have any questions or concerns regarding these Terms, please contact us at [emilkarlsson@me.com](mailto:emilkarlsson@me.com).
+
+---
+
+Thank you for using Emil Ingemar Karlsson’s Website. By continuing to use the Website, you agree to comply with these Terms of Service.
