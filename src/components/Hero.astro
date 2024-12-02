@@ -16,7 +16,7 @@ const experience = siteConfig.experience;
             
             {hero.image?.src && (
                 <figure>
-                    <img class="w-full" src={hero.image.src} loading="lazy" decoding="async" alt={hero.image.alt || ''} />
+                    <img class="w-full rounded-lg border border-main" src={hero.image.src} loading="lazy" decoding="async" alt={hero.image.alt || ''} />
                     {hero.image.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{hero.image.caption}</figcaption>}
                 </figure>
             )}
@@ -78,7 +78,14 @@ const experience = siteConfig.experience;
                             <h3 class="mb-4 font-medium">{skill.category}</h3>
                             <div class="flex gap-2 flex-wrap">
                                 {skill.items.map((item) => (
-                                    <Button size="small">{item}</Button>
+                                    <a
+                                        href={item.url || '#'}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="inline-flex items-center justify-center px-3 py-1 text-xs font-serif italic text-main bg-muted border border-main rounded transition hover:bg-main hover:text-white"
+                                    >
+                                        {item.text}
+                                    </a>
                                 ))}
                             </div>
                         </div>
