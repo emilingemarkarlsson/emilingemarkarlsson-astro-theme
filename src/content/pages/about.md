@@ -18,6 +18,24 @@ schema:
     url: https://www.emilingemarkarlsson.com
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Emil Karlsson",
+  "jobTitle": "Project Manager, Data Engineer, and Hockey Analyst",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "The Unnamed Road AB"
+  },
+  "sameAs": [
+    "https://github.com/emilingemarkarlsson",
+    "https://www.goodreads.com/emilingemarkarlsson"
+  ],
+  "url": "https://www.emilingemarkarlsson.com/about"
+}
+</script>
+
 ## About Me
 
 Hi, I’m Emil Karlsson. I work as a Project Manager, Data Engineer, and Hockey Analyst, focusing on building efficient data pipelines, analyzing complex data, and leading teams. I also have experience with GDPR compliance, creating scalable solutions, and delivering actionable hockey insights.
