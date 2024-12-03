@@ -5,8 +5,8 @@ module.exports = {
     darkMode: 'class',
     theme: {
         fontFamily: {
-            sans: ['Inter', ...defaultTheme.fontFamily.sans],
-            serif: ['Newsreader', ...defaultTheme.fontFamily.serif]
+            sans: ['Arial', ...defaultTheme.fontFamily.sans],
+            serif: ['Arial', ...defaultTheme.fontFamily.serif]
         },
         extend: {
             textColor: {
@@ -30,7 +30,7 @@ module.exports = {
                         '--tw-prose-quotes': theme('textColor.main'),
                         '--tw-prose-pre-bg': theme('colors.zinc.800'),
                         h2: {
-                            fontStyle: 'italic'
+                            fontStyle: 'bold'
                         }
                     }
                 }

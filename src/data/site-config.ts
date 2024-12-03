@@ -1,5 +1,5 @@
 const siteConfig = {
-    title: 'Emil Ingemar Karlsson',
+    title: 'Emil Karlsson',
     subtitle: 'Based in Stockholm, Sweden',
     description: 'Emil Karlsson Playground Site - Explore data engineering, project management, and hockey analytics.',
     image: {
@@ -99,6 +99,7 @@ const siteConfig = {
                 { text: 'Rill', url: 'https://rilldata.com/' },
                 { text: 'Power BI', url: 'https://powerbi.microsoft.com/' },
                 { text: 'Looker Studio', url: 'https://lookerstudio.google.com/' },
+                { text: 'Grafana', url: 'https://grafana.com/' },
                 { text: 'Python Graphics', url: 'https://matplotlib.org/' },
             ],
         },
@@ -107,6 +108,7 @@ const siteConfig = {
             items: [
                 { text: 'Google Analytics', url: 'https://analytics.google.com/' },
                 { text: 'Microsoft Clarity', url: 'https://clarity.microsoft.com/' },
+                { text: 'Semrush', url: 'https://semrush.com/' },
                 { text: 'Maze', url: 'https://maze.co/' },
             ],
         },
@@ -115,6 +117,8 @@ const siteConfig = {
             items: [
                 { text: 'Power Automate', url: 'https://powerautomate.microsoft.com/' },
                 { text: 'Trello', url: 'https://trello.com/' },
+                { text: 'Taskade', url: 'https://taskade.com/' },
+                { text: 'SanaLabs', url: 'https://sanalabs.com/' },
                 { text: 'JIRA', url: 'https://www.atlassian.com/software/jira' },
             ],
         },

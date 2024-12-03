@@ -19,9 +19,10 @@
 
     /* Global Font Settings */
     body {
-        font-family: 'Inter', sans-serif; /* Unified font for the site */
+        font-family: 'Arial', sans-serif; /* Primary font for the site */
         color: rgb(var(--color-text-main) / 1); /* Main text color */
         background-color: rgb(var(--color-bg-main) / 1); /* Background color */
+        font-style: normal; /* Ensure text is not italic */
     }
 
     h1,
@@ -30,8 +31,9 @@
     h4,
     h5,
     h6 {
-        font-family: 'Newsreader', serif; /* Font for headings */
+        font-family: 'Arial', sans-serif; /* Font for headings */
         color: rgb(var(--color-text-main) / 1); /* Ensure text color matches */
+        font-style: normal; /* Ensure headings are not italic */
     }
 
     p,
@@ -40,8 +42,16 @@
     input,
     textarea,
     .prose {
-        font-family: 'Inter', sans-serif; /* Body text font */
+        font-family: 'Arial', sans-serif; /* Body text font */
         color: rgb(var(--color-text-main) / 1); /* Main text color */
+        font-style: normal; /* Ensure these elements are not italic */
+    }
+
+    /* Font-style Reset for All Text Elements */
+    body,
+    h1, h2, h3, h4, h5, h6,
+    p, a, button, input, textarea {
+        font-style: normal;
     }
 
     /* Button Styling */

@@ -6,23 +6,19 @@ type ButtonProps = HTMLAttributes<'button'> & { href?: never };
 
 type Props = ButtonProps | AnchorProps;
 
-const { href, class: className, size = 'default', ...rest } = Astro.props;
+const { href, class: className, ...rest } = Astro.props;
 const baseClasses =
-    'inline-flex items-center justify-center font-serif leading-tight italic text-main bg-main border border-main rounded-full transition hover:bg-muted';
-const sizeClasses =
-    size === 'small'
-        ? 'px-4 py-1 text-xs' // Smaller padding and font size
-        : 'px-6 py-2 text-sm'; // Default size
-const buttonClasses = `${baseClasses} ${sizeClasses}`;
+    'inline-flex items-center justify-center px-4 py-2 font-sans text-sm font-normal text-main bg-muted border border-main rounded-lg transition hover:bg-main hover:text-white';
+const buttonClasses = `${baseClasses} ${className || ''}`;
 ---
 
 {
     href ? (
-        <a href={href} class:list={[buttonClasses, className]} {...rest}>
+        <a href={href} class={buttonClasses} {...rest}>
             <slot />
         </a>
     ) : (
-        <button class:list={[buttonClasses, className]} {...rest}>
+        <button class={buttonClasses} {...rest}>
             <slot />
         </button>
     )
