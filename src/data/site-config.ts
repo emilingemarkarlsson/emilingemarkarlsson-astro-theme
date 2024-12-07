@@ -8,6 +8,7 @@ const siteConfig = {
     },
     headerNavLinks: [
         { text: 'Home', href: '/' },
+        { text: 'Writings', href: '/blog' }, // Updated navigation link
         { text: 'Projects', href: '/projects' },
         { text: 'Tags', href: '/tags' },
     ],

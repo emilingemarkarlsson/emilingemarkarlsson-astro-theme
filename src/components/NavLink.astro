@@ -3,12 +3,23 @@ import type { HTMLAttributes } from 'astro/types';
 
 type Props = HTMLAttributes<'a'>;
 
+// Extract the href and class attributes from Astro props, along with any additional props
 const { href, class: className, ...props } = Astro.props;
 
+// Get the current pathname from the URL
 const { pathname } = Astro.url;
+
+// Determine if the current link is active by comparing the href with the pathname
 const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 ---
 
-<a class:list={[className, { 'underline underline-offset-2 decoration-1': isActive }]} href={href} {...props}>
+<a
+    class:list={[
+        className, // Add custom class names passed via props
+        { 'underline underline-offset-2 decoration-1': isActive }, // Add active styles if the link is active
+    ]}
+    href={href}
+    {...props} // Spread additional props onto the anchor tag
+>
     <slot />
 </a>
