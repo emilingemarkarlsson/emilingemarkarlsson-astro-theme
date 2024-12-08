@@ -15,10 +15,10 @@ publishDate: 'Dec 1 2024'
 isFeatured: true
 seo:
   image:
-    src: '/project-12.png'
+    src: '/project-11.png'
 ---
 
-![Project preview](/project-12.png)
+![Project preview](/project-11.png)
 
 **Project Objective:**
 

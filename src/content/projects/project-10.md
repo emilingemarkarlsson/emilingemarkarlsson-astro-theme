@@ -16,7 +16,7 @@ tags:
   - Power BI
 publishDate: 'Dec 4 2024'
 isFeatured: true
-seo:   
+seo:
   image:
     src: '/project-10.png'
 ---
@@ -30,6 +30,7 @@ The project began with a straightforward goal: to create a centralized data lake
 **How It Started:**
 
 Initially, the project focused on solving two critical challenges:
+
 1. Bringing together data scattered across legacy databases, APIs, and file-based systems.
 2. Establishing a flexible architecture that could scale with growing enterprise demands.
 
@@ -48,14 +49,17 @@ Over the course of the project, the ecosystem evolved into a full-fledged framew
 **How It Works Today:**
 
 1. **Centralized Data Lake**:
+
    - All enterprise data flows into Azure Blob Storage, organized for efficient access and processing.
    - Delta Lake ensures transaction support and version control for robust data handling.
 
 2. **Automated Ingestion and Transformation**:
+
    - Pipelines built in Azure Data Factory and Databricks handle data extraction, cleaning, and enrichment.
    - dbt enables modular transformations, creating reusable and maintainable datasets.
 
 3. **Insights for Business Teams**:
+
    - Power BI provides dynamic dashboards for monitoring KPIs and trends in real time.
    - Python visualizations offer deeper analytical capabilities for advanced use cases.
 
@@ -66,6 +70,7 @@ Over the course of the project, the ecosystem evolved into a full-fledged framew
 **Outcome:**
 
 The project has now matured into a production-grade ecosystem that drives measurable business value. Key outcomes include:
+
 - **Enhanced Efficiency**: Automated processes significantly reduce the time and effort required for data preparation.
 - **Rapid Decision-Making**: Real-time insights empower teams to respond quickly to emerging trends.
 - **Scalable Architecture**: The system supports growing data volumes and diverse use cases without compromising performance.
