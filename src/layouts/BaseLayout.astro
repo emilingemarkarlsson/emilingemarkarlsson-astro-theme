@@ -38,8 +38,9 @@ const jsonLd = {
                 document.documentElement.classList.add('dark');
             }
         </script>
+        <!-- Inject JSON-LD Schema -->
         <script type="application/ld+json">
-            {JSON.stringify(jsonLd)}
+            {`${JSON.stringify(jsonLd)}`}
         </script>
     </head>
     <body class="bg-main text-main">
