@@ -1,88 +1,77 @@
-# Dante - Astro & Tailwind CSS Theme by justgoodui.com
+# Emil Karlsson's Blog and Portfolio Theme
 
-Dante is a single-author blog and portfolio theme for Astro.js. Featuring a minimal, slick, responsive and content-focused design. For more Astro.js themes please check [justgoodui.com](https://justgoodui.com/).
+This is a personalized version of the **Dante - Astro & Tailwind CSS Theme** originally created by [justgoodui.com](https://justgoodui.com/). The theme provides a clean, modern design optimized for blogging and showcasing projects. It has been tailored to suit my needs as a data engineer, project manager, and hockey analytics enthusiast.
 
-![Dante Astro.js Theme](public/dante-preview.jpg)
+![Preview of the Theme](public/dante-preview.jpg)
 
-[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/JustGoodUI/dante-astro-theme)
+This theme is built using **Astro.js** and **Tailwind CSS** and includes features such as dark mode, tags, a subscription form, and more.
 
-If you click this☝️ button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify.
+---
 
-## Theme Features:
+## Why This Theme?
 
-- ✅ Dark and light color mode
-- ✅ Hero section with bio
-- ✅ Portfolio collection
-- ✅ Pagination support
-- ✅ Post tags support
-- ✅ Subscription form
-- ✅ View transitions
-- ✅ Tailwind CSS
+I chose this theme because of its sleek, content-focused design and flexibility, making it ideal for my portfolio and blog. It's a great starting point for showcasing work in fields like data engineering, hockey analytics, and beyond.
+
+Original theme credit: [justgoodui.com](https://justgoodui.com/).
+
+---
+
+## Features
+
+This project comes with the following features out of the box:
+
+- ✅ Dark and light mode toggle
+- ✅ Hero section with a personal bio
+- ✅ Portfolio collection for projects
+- ✅ Pagination for easy navigation
+- ✅ Tags for blog posts
+- ✅ Subscription form for email capture
+- ✅ View transitions for a modern feel
+- ✅ Tailwind CSS for styling
 - ✅ Mobile-first responsive layout
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
+- ✅ SEO optimizations (canonical URLs, OpenGraph data)
+- ✅ Sitemap generation
 - ✅ RSS Feed support
 - ✅ Markdown & MDX support
 
-## Template Integrations
+---
 
-- @astrojs/tailwind - https://docs.astro.build/en/guides/integrations-guide/tailwind/
-- @astrojs/sitemap - https://docs.astro.build/en/guides/integrations-guide/sitemap/
-- @astrojs/mdx - https://docs.astro.build/en/guides/markdown-content/
-- @astrojs/rss - https://docs.astro.build/en/guides/rss/
+## Technologies and Integrations
+
+This project uses the following integrations and technologies:
+
+- [@astrojs/tailwind](https://docs.astro.build/en/guides/integrations-guide/tailwind/) - Tailwind CSS integration
+- [@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/) - Automatic sitemap generation
+- [@astrojs/mdx](https://docs.astro.build/en/guides/markdown-content/) - MDX support for enhanced markdown
+- [@astrojs/rss](https://docs.astro.build/en/guides/rss/) - RSS feed generation
+
+---
 
 ## Project Structure
 
-Inside of Dante Astro theme, you'll see the following folders and files:
+Here’s how the project is organized:
 
 ```text
 ├── public/
 ├── src/
-│   ├── components/
-│   ├── content/
-│   ├── data/
-│   ├── icons/
-│   ├── layouts/
-│   ├── pages/
-│   ├── styles/
-│   └── utils/
+│   ├── components/   # Reusable components
+│   ├── content/      # Blog posts and project collections
+│   ├── data/         # Configurations and metadata
+│   ├── icons/        # Icon assets
+│   ├── layouts/      # Page layouts
+│   ├── pages/        # Routes and individual pages
+│   ├── styles/       # Global and utility CSS
+│   └── utils/        # Utility functions
 ├── astro.config.mjs
 ├── package.json
 ├── README.md
 ├── tailwind.config.cjs
 └── tsconfig.json
-```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro (`.astro`) components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## Astro.js Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## Want to learn more about Astro.js?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credits
-
-- Demo content generate with [Chat GPT](https://chat.openai.com/)
-- Images for demo content from [Unsplash](https://unsplash.com/)
-
-## License
-
-Licensed under the [GPL-3.0](https://github.com/JustGoodUI/dante-astro-theme/blob/main/LICENSE) license.
+Command	Action
+npm install	Installs dependencies
+npm run dev	Starts local dev server at localhost:4321
+npm run build	Builds the production site to ./dist/
+npm run preview	Previews the production build locally
+npm run astro ...	Run CLI commands like astro add, astro check
+npm run astro -- --help	Get help using the Astro CLI
