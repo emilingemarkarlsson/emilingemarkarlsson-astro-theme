@@ -30,28 +30,39 @@ const jsonLd = {
   }
 };
 
-// Log the JSON-LD object for debugging
+// Debugging: Log the JSON-LD object
 console.log("Generated JSON-LD:", JSON.stringify(jsonLd, null, 2));
 ---
 <html lang="en" class="antialiased break-words">
     <head>
+        <!-- Base Meta Information -->
         <BaseHead {...head} />
+        
+        <!-- Theme Configuration -->
         <script>
             if (localStorage.theme === 'dark') {
                 document.documentElement.classList.add('dark');
             }
         </script>
-        <!-- Inject JSON-LD Schema -->
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}>
-        </script>
+        
+        <!-- JSON-LD Schema -->
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}></script>
     </head>
     <body class="bg-main text-main">
+        <!-- Page Structure -->
         <div class="flex flex-col min-h-screen px-4 md:px-8">
+            <!-- Navigation -->
             <Nav />
+            
+            <!-- Header (Optional) -->
             {showHeader && <Header />}
+            
+            <!-- Main Content -->
             <main class="grow w-full max-w-3xl mx-auto">
                 <slot />
             </main>
+            
+            <!-- Footer -->
             <Footer />
         </div>
     </body>
