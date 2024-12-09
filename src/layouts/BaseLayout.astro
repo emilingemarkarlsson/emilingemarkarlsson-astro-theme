@@ -13,22 +13,25 @@ const { showHeader = true, ...head } = Astro.props;
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": siteConfig.title,
+  "name": siteConfig.title || "Default Title", // Fallback title
   "url": "https://www.emilingemarkarlsson.com",
-  "description": siteConfig.description,
+  "description": siteConfig.description || "Default description", // Fallback description
   "author": {
     "@type": "Person",
     "name": "Emil Karlsson",
     "description": "Project Manager and Data Engineer based in Stockholm, Sweden",
     "url": "https://www.emilingemarkarlsson.com",
-    "sameAs": siteConfig.socialLinks?.map(link => link.href) || []
+    "sameAs": siteConfig.socialLinks?.map(link => link.href).filter(Boolean) || [] // Fallback to empty array
   },
   "image": {
     "@type": "ImageObject",
-    "url": siteConfig.image.src,
-    "alt": siteConfig.image.alt
+    "url": siteConfig.image?.src || "https://www.example.com/default-image.jpg", // Fallback image URL
+    "alt": siteConfig.image?.alt || "Default image alt text" // Fallback alt text
   }
 };
+
+// Log the JSON-LD object for debugging
+console.log("Generated JSON-LD:", JSON.stringify(jsonLd, null, 2));
 ---
 <html lang="en" class="antialiased break-words">
     <head>
@@ -39,8 +42,7 @@ const jsonLd = {
             }
         </script>
         <!-- Inject JSON-LD Schema -->
-        <script type="application/ld+json">
-            {`${JSON.stringify(jsonLd)}`}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}>
         </script>
     </head>
     <body class="bg-main text-main">
