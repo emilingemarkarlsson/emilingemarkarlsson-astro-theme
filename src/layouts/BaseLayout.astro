@@ -3,7 +3,7 @@ import BaseHead, { type Props as HeadProps } from '../components/BaseHead.astro'
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
-import siteConfig from '../data/site-config'; // Ensure the correct path
+import siteConfig from '../data/site-config';
 
 export type Props = HeadProps & { showHeader?: boolean };
 
@@ -21,7 +21,7 @@ const jsonLd = {
     "name": "Emil Karlsson",
     "description": "Project Manager and Data Engineer based in Stockholm, Sweden",
     "url": "https://www.emilingemarkarlsson.com",
-    "sameAs": siteConfig.socialLinks.map(link => link.href)
+    "sameAs": siteConfig.socialLinks?.map(link => link.href) || []
   },
   "image": {
     "@type": "ImageObject",
@@ -39,7 +39,7 @@ const jsonLd = {
             }
         </script>
         <script type="application/ld+json">
-            {`${JSON.stringify(jsonLd)}`} <!-- Corrected JSON-LD injection -->
+            {JSON.stringify(jsonLd)}
         </script>
     </head>
     <body class="bg-main text-main">
