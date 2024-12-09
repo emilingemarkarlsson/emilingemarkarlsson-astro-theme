@@ -14,6 +14,8 @@ tags:
   - Orchestration
   - Open Source
   - Modern Data Stack
+  - GDPR and Privacy
+  - Project Management
 publishDate: 'Sep 21 2024'
 isFeatured: true
 seo:   

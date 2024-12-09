@@ -11,6 +11,9 @@ tags:
   - Python
   - Data Transformation
   - Decision-Making
+  - B2B-Commerce
+  - GDPR and Privacy
+  - Project Management
 publishDate: 'Dec 1 2024'
 isFeatured: true
 seo:

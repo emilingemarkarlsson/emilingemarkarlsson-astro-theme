@@ -5,6 +5,7 @@ tags:
   - Django
   - Python
   - Bootstrap
+  - Project Management
 publishDate: 'Jan 04 2024'
 seo:
   image:

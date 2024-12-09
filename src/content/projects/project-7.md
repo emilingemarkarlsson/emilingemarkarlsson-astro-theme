@@ -12,6 +12,7 @@ tags:
   - Web Scraping
   - Sports Analytics
   - Performance Metrics
+  - Project Management
 publishDate: 'Jan 07 2024'
 isFeatured: true
 seo:

@@ -8,6 +8,7 @@ tags:
   - Sketch
   - Prototyping
   - UX Design
+  - Project Management
 publishDate: 'Jan 02 2024'
 isFeatured: true
 seo:

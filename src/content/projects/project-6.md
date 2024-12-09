@@ -3,7 +3,7 @@ title: Customer Support Efficiency and Experience
 description: Our initiative aimed to refine customer service operations, ensuring smoother interactions and heightened satisfaction. Through meticulous optimization, we strived to streamline support processes, prioritizing an exceptional customer journey at every encounter.
 tags:
   - Customer Support
-  - Customer Experience
+  - Customer Support Management
   - Business Intelligence
   - Data Analytics
   - Proactive Resolution
@@ -13,6 +13,8 @@ tags:
   - ServiceNow
   - Collaboration
   - Process Optimization
+  - Infrastructure Management
+  - Project Management
 publishDate: 'Jan 06 2024'
 seo:
   image:

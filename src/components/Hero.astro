@@ -72,7 +72,7 @@ const experience = siteConfig.experience;
                         <h3 class="mb-2 font-medium text-base sm:text-lg">Technical Experience</h3>
                         <div class="flex gap-3 flex-wrap">
                             {experience.technical.map((item) => (
-                                <Button size="default">{item}</Button>
+                                <Button href={item.url} size="default">{item.label}</Button>
                             ))}
                         </div>
                     </div>
@@ -82,7 +82,7 @@ const experience = siteConfig.experience;
                         <h3 class="mb-2 font-medium text-base sm:text-lg">Leadership Experience</h3>
                         <div class="flex gap-3 flex-wrap">
                             {experience.leadership.map((item) => (
-                                <Button size="default">{item}</Button>
+                                <Button href={item.url} size="default">{item.label}</Button>
                             ))}
                         </div>
                     </div>

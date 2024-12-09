@@ -14,6 +14,8 @@ tags:
   - Orchestration
   - Databricks
   - Power BI
+  - GDPR and Privacy
+  - Project Management
 publishDate: 'Dec 4 2024'
 isFeatured: true
 seo:

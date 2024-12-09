@@ -13,6 +13,8 @@ tags:
   - Snowflake
   - Databricks
   - Power BI
+  - Customer Support Management
+  - Project Management
 publishDate: 'Jan 08 2024'
 isFeatured: true
 seo:

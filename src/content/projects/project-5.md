@@ -3,6 +3,7 @@ title: 'Enhancing Outsourced IT Operations through Data-Driven Proactivity'
 description: In this project, we harnessed historical data to identify patterns and proactively optimize efficiency, reduce downtime, and enhance overall service quality in outsourced IT operations. 🚀
 tags:
   - Outsourced IT
+  - Customer Support Management
   - IT Operations
   - SLA Management
   - Data Analytics
@@ -14,6 +15,8 @@ tags:
   - Continuous Improvement
   - ITSM Tools
   - Operational Efficiency
+  - Infrastructure Management
+  - Project Management
 publishDate: 'Jan 05 2024'
 isFeatured: true
 seo:
