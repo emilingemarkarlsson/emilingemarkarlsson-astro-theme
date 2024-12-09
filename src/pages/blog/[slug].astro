@@ -27,8 +27,28 @@ const { href } = Astro.url;
 const { post, prevPost, nextPost } = Astro.props;
 const { title, publishDate, updatedDate, excerpt, tags = [], seo } = post.data;
 const { Content } = await post.render();
----
 
+// Generate JSON-LD Schema for the blog post
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": excerpt,
+    "author": {
+        "@type": "Person",
+        "name": "Emil Karlsson",
+        "url": "https://www.emilingemarkarlsson.com"
+    },
+    "datePublished": publishDate,
+    "dateModified": updatedDate || publishDate,
+    "url": href,
+    "keywords": tags.join(", "),
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.emilingemarkarlsson.com/blog"
+    }
+};
+---
 <BaseLayout title={seo?.title ?? title} description={seo?.description ?? excerpt} image={seo?.image} pageType="article" showHeader={false}>
     <article class="mb-16 sm:mb-24">
         <header class="mb-8">
@@ -75,6 +95,10 @@ const { Content } = await post.render();
         )
     }
     <Subscribe class="my-16 sm:my-24" />
+    <!-- Embed JSON-LD Schema -->
+    <script type="application/ld+json">
+        {JSON.stringify(jsonLd)}
+    </script>
 </BaseLayout>
 
 <script>

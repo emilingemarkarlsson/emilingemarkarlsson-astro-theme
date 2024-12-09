@@ -1,30 +1,35 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
 import BaseHead, { type Props as HeadProps } from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
+import siteConfig from '../data/site-config'; // Correct path to site-config.ts
 
 export type Props = HeadProps & { showHeader?: boolean };
 
 const { showHeader = true, ...head } = Astro.props;
+
+// Generate JSON-LD Schema
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": siteConfig.title,
+  "url": "https://www.emilingemarkarlsson.com",
+  "description": siteConfig.description,
+  "author": {
+    "@type": "Person",
+    "name": "Emil Karlsson",
+    "description": "Project Manager and Data Engineer based in Stockholm, Sweden",
+    "url": "https://www.emilingemarkarlsson.com",
+    "sameAs": siteConfig.socialLinks.map(link => link.href) // Dynamically add social links
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": siteConfig.image.src,
+    "alt": siteConfig.image.alt
+  }
+};
 ---
-
-<script type="text/javascript">
-    (function (c, l, a, r, i, t, y) {
-        c[a] =
-            c[a] ||
-            function () {
-                (c[a].q = c[a].q || []).push(arguments);
-            };
-        t = l.createElement(r);
-        t.async = 1;
-        t.src = 'https://www.clarity.ms/tag/' + i;
-        y = l.getElementsByTagName(r)[0];
-        y.parentNode.insertBefore(t, y);
-    })(window, document, 'clarity', 'script', 'o6jc80qcdb');
-</script>
-
 <html lang="en" class="antialiased break-words">
     <head>
         <BaseHead {...head} />
@@ -33,7 +38,9 @@ const { showHeader = true, ...head } = Astro.props;
                 document.documentElement.classList.add('dark');
             }
         </script>
-        <ViewTransitions />
+        <script type="application/ld+json">
+            {JSON.stringify(jsonLd)}
+        </script>
     </head>
     <body class="bg-main text-main">
         <div class="flex flex-col min-h-screen px-4 md:px-8">
