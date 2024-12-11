@@ -3,6 +3,7 @@ import GoogleTagManager from '../components/GoogleTagManager.astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import ZapierTracker from '../components/ZapierTracker.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
+import Clarity from '../components/Clarity.astro';
 import BaseHead, { type Props as HeadProps } from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
@@ -48,6 +49,9 @@ const jsonLd = {
 
         <!-- Zapier Tracker -->
         <ZapierTracker webhookUrl="https://hooks.zapier.com/hooks/catch/416486/2sd4r8l/" />
+
+        <!-- Microsoft Clarity -->
+        <Clarity />
 
         <!-- Base Meta Information -->
         <BaseHead {...head} />
