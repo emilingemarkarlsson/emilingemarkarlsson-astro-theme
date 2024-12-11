@@ -1,63 +1,116 @@
 ---
 import GoogleTagManager from '../components/GoogleTagManager.astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
-import ZapierTracker from '../components/ZapierTracker.astro';
-import ThemeToggle from '../components/ThemeToggle.astro';
 import Clarity from '../components/Clarity.astro';
 import BaseHead, { type Props as HeadProps } from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
-import siteConfig from '../data/site-config';
 
 export type Props = HeadProps & { showHeader?: boolean };
 
 const { showHeader = true, ...head } = Astro.props;
-
-// JSON-LD Schema
-const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: siteConfig.title || 'Default Title',
-    url: 'https://www.emilingemarkarlsson.com',
-    description: siteConfig.description || 'Default description',
-    author: {
-        '@type': 'Person',
-        name: 'Emil Karlsson',
-        description: 'Project Manager and Data Engineer based in Stockholm, Sweden',
-        url: 'https://www.emilingemarkarlsson.com',
-        sameAs: siteConfig.socialLinks?.map((link) => link.href).filter(Boolean) || []
-    },
-    image: {
-        '@type': 'ImageObject',
-        url: siteConfig.image?.src || 'https://www.example.com/default-image.jpg',
-        alt: siteConfig.image?.alt || 'Default image alt text'
-    }
-};
 ---
 
 <html lang="en" class="antialiased break-words">
     <head>
-        <!-- Character Encoding -->
-        <meta charset="UTF-8" />
+        <!-- Base Meta Information -->
+        <BaseHead {...head} />
 
-        <!-- Google Tag Manager -->
-        <GoogleTagManager gtmId="GTM-5MBF73WM" />
+        <!-- High Priority Global Metadata -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Emil Karlsson</title>
+        <meta name="generator" content="Astro v5.0.3" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Low Priority Global Metadata -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS" />
+
+        <!-- Page Metadata -->
+        <link rel="canonical" href="https://www.emilingemarkarlsson.com/" />
+        <meta name="description" content="Emil Karlsson Playground Site - Explore data engineering, project management, and hockey analytics." />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.emilingemarkarlsson.com/" />
+        <meta property="og:title" content="Emil Karlsson" />
+        <meta property="og:description" content="Emil Karlsson Playground Site - Explore data engineering, project management, and hockey analytics." />
+        <meta property="og:image" content="https://www.emilingemarkarlsson.com/dante-preview.jpg" />
+        <meta property="og:image:alt" content="Dante - Astro.js and Tailwind CSS theme" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.emilingemarkarlsson.com/" />
+        <meta property="twitter:title" content="Emil Karlsson" />
+        <meta property="twitter:description" content="Emil Karlsson Playground Site - Explore data engineering, project management, and hockey analytics." />
+        <meta property="twitter:image" content="https://www.emilingemarkarlsson.com/dante-preview.jpg" />
+        <meta name="twitter:image:alt" content="Dante - Astro.js and Tailwind CSS theme" />
 
         <!-- Google Analytics -->
         <GoogleAnalytics measurementId="G-6EGDNMZKRL" />
 
-        <!-- Zapier Tracker -->
-        <ZapierTracker webhookUrl="https://hooks.zapier.com/hooks/catch/416486/2sd4r8l/" />
+        <!-- Google Tag Manager -->
+        <GoogleTagManager gtmId="GTM-5MBF73WM" />
 
         <!-- Microsoft Clarity -->
-        <Clarity />
+        <Clarity clarityId="o6jc80qcdb" />
 
-        <!-- Base Meta Information -->
-        <BaseHead {...head} />
+        <!-- Custom Global Styles -->
+        <link rel="stylesheet" href="/src/styles/global.css" />
 
-        <!-- JSON-LD Schema -->
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}></script>
+        <!-- Partytown -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6EGDNMZKRL"></script>
+        <script type="text/partytown-x">
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-6EGDNMZKRL');
+        </script>
+
+        <!-- JavaScript Dialog Overrides -->
+        <script>
+            if (!window._originalPrompt) {
+                window._originalPrompt = window.prompt;
+                window._originalConfirm = window.confirm;
+                window._originalAlert = window.alert;
+            }
+
+            function manipulateDialog(methodName, oldDialog) {
+                window[methodName] = function (message = '', defaultValue = '') {
+                    var answer = oldDialog(message, defaultValue);
+                    if (methodName === 'confirm') answer = answer.toString();
+                    if (answer || /(alert|confirm)/.test(methodName)) {
+                        window.postMessage(
+                            {
+                                type: 'extension:injected-script',
+                                payload: {
+                                    type: methodName,
+                                    value: answer
+                                }
+                            },
+                            '*'
+                        );
+                    }
+                    return answer;
+                };
+            }
+
+            manipulateDialog('prompt', window._originalPrompt);
+            manipulateDialog('confirm', window._originalConfirm);
+            manipulateDialog('alert', window._originalAlert);
+        </script>
     </head>
     <body class="bg-main text-main">
         <!-- Google Tag Manager (noscript) -->
