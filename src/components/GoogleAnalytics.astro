@@ -1,11 +1,13 @@
-<!-- head -->
-<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=6EGDNMZKRL"></script>
-<script type="text/partytown">
+---
+export let measurementId = 'ç'; // Byt ut med ditt Measurement ID
+---
+
+<script async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
         dataLayer.push(arguments);
     }
     gtag('js', new Date());
-    gtag('config', 'G-6EGDNMZKRL');
+    gtag('config', '{measurementId}');
 </script>
-<!-- more head -->
