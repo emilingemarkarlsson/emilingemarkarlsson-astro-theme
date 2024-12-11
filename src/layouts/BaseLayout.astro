@@ -1,3 +1,7 @@
+---
+import GoogleTagManager from '../components/GoogleTagManager.astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import ZapierTracker from '../components/ZapierTracker.astro';
 import BaseHead, { type Props as HeadProps } from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
@@ -8,129 +12,73 @@ export type Props = HeadProps & { showHeader?: boolean };
 
 const { showHeader = true, ...head } = Astro.props;
 
-// Generate JSON-LD Schema
+// JSON-LD Schema
 const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: siteConfig.title || 'Default Title', // Fallback title
+    name: siteConfig.title || 'Default Title',
     url: 'https://www.emilingemarkarlsson.com',
-    description: siteConfig.description || 'Default description', // Fallback description
+    description: siteConfig.description || 'Default description',
     author: {
         '@type': 'Person',
         name: 'Emil Karlsson',
         description: 'Project Manager and Data Engineer based in Stockholm, Sweden',
         url: 'https://www.emilingemarkarlsson.com',
-        sameAs: siteConfig.socialLinks?.map((link) => link.href).filter(Boolean) || [] // Fallback to empty array
+        sameAs: siteConfig.socialLinks?.map((link) => link.href).filter(Boolean) || []
     },
     image: {
         '@type': 'ImageObject',
-        url: siteConfig.image?.src || 'https://www.example.com/default-image.jpg', // Fallback image URL
-        alt: siteConfig.image?.alt || 'Default image alt text' // Fallback alt text
+        url: siteConfig.image?.src || 'https://www.example.com/default-image.jpg',
+        alt: siteConfig.image?.alt || 'Default image alt text'
     }
 };
+---
 
-// Debugging: Log the JSON-LD object
-console.log('Generated JSON-LD:', JSON.stringify(jsonLd, null, 2));
+<html lang="en" class="antialiased break-words">
+    <head>
+        <!-- Google Tag Manager -->
+        <GoogleTagManager gtmId="GTM-5MBF73WM" />
 
-export default function Page() {
-    return (
-        <html lang="en" class="antialiased break-words">
-            <head>
-                <!-- Google Tag Manager -->
-                <script>
-                    (function (w, d, s, l, i) {
-                        w[l] = w[l] || [];
-                        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-                        var f = d.getElementsByTagName(s)[0],
-                            j = d.createElement(s),
-                            dl = l != 'dataLayer' ? '&l=' + l : '';
-                        j.async = true;
-                        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-                        f.parentNode.insertBefore(j, f);
-                    })(window, document, 'script', 'dataLayer', 'GTM-5MBF73WM');
-                </script>
-                <!-- End Google Tag Manager -->
+        <!-- Google Analytics -->
+        <GoogleAnalytics measurementId="G-6EGDNMZKRL" />
 
-                <!-- Google Analytics (gtag.js) -->
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EGDNMZKRL"></script>
-                <script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag() {
-                        dataLayer.push(arguments);
-                    }
-                    gtag('js', new Date());
-                    gtag('config', 'G-6EGDNMZKRL');
-                </script>
-                <!-- End Google Analytics -->
+        <!-- Zapier Tracker -->
+        <ZapierTracker webhookUrl="https://hooks.zapier.com/hooks/catch/416486/2sd4r8l/" />
 
-                <!-- Session Tracking Script for Zapier -->
-                <script>
-                    if (!sessionStorage.getItem('sessionStarted')) {
-                        sessionStorage.setItem('sessionStarted', 'true');
+        <!-- Base Meta Information -->
+        <BaseHead {...head} />
 
-                        fetch('https://hooks.zapier.com/hooks/catch/416486/2sd4r8l/', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({
-                                event: 'new_session',
-                                page: window.location.href,
-                                timestamp: new Date().toISOString()
-                            })
-                        })
-                            .then((response) =>
-                                console.log('Session data sent to Zapier:', response.status)
-                            )
-                            .catch((error) =>
-                                console.error('Error sending data to Zapier:', error)
-                            );
-                    }
-                </script>
+        <!-- Theme Configuration -->
+        <script>
+            if (localStorage.theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        </script>
 
-                <!-- Base Meta Information -->
-                <BaseHead {...head} />
+        <!-- JSON-LD Schema -->
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}></script>
+    </head>
+    <body class="bg-main text-main">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MBF73WM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
 
-                <!-- Theme Configuration -->
-                <script>
-                    if (localStorage.theme === 'dark') {
-                        document.documentElement.classList.add('dark');
-                    }
-                </script>
+        <!-- Page Structure -->
+        <div class="flex flex-col min-h-screen px-4 md:px-8">
+            <!-- Navigation -->
+            <Nav />
 
-                <!-- JSON-LD Schema -->
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-                ></script>
-            </head>
-            <body class="bg-main text-main">
-                <!-- Google Tag Manager (noscript) -->
-                <noscript>
-                    <iframe
-                        src="https://www.googletagmanager.com/ns.html?id=GTM-5MBF73WM"
-                        height="0"
-                        width="0"
-                        style={{ display: 'none', visibility: 'hidden' }}
-                    ></iframe>
-                </noscript>
-                <!-- End Google Tag Manager (noscript) -->
+            <!-- Header (Optional) -->
+            {showHeader && <Header />}
 
-                <!-- Page Structure -->
-                <div class="flex flex-col min-h-screen px-4 md:px-8">
-                    {/* Navigation */}
-                    <Nav />
+            <!-- Main Content -->
+            <main class="grow w-full max-w-3xl mx-auto">
+                <slot />
+            </main>
 
-                    {/* Header (Optional) */}
-                    {showHeader && <Header />}
-
-                    {/* Main Content */}
-                    <main class="grow w-full max-w-3xl mx-auto">
-                        <slot />
-                    </main>
-
-                    {/* Footer */}
-                    <Footer />
-                </div>
-            </body>
-        </html>
-    );
-}
+            <!-- Footer -->
+            <Footer />
+        </div>
+    </body>
+</html>

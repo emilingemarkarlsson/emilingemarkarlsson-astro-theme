@@ -1,0 +1,19 @@
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        if (!sessionStorage.getItem('sessionStarted')) {
+            sessionStorage.setItem('sessionStarted', 'true');
+
+            fetch('https://hooks.zapier.com/hooks/catch/416486/2sd4r8l/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    event: 'new_session',
+                    page: window.location.href,
+                    timestamp: new Date().toISOString()
+                })
+            })
+                .then((response) => console.log('Session data sent to Zapier:', response.status))
+                .catch((error) => console.error('Error sending data to Zapier:', error));
+        }
+    });
+</script>
