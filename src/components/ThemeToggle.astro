@@ -1,49 +1,48 @@
----
-
----
-
 <button id="theme-toggle" class="w-8 h-8 -mr-2 flex items-center justify-center" aria-label="Change color scheme">
-    <svg class="w-4 h-4 fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="8" cy="8" r="8"></circle>
+    <svg id="theme-icon" class="w-4 h-4 fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <!-- Default dark mode icon -->
+        <circle cx="8" cy="8" r="8" fill="white"></circle>
     </svg>
 </button>
 
 <script>
-    document.addEventListener('astro:page-load', () => {
-        const theme = (() => {
-            if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-                return localStorage.getItem('theme') || 'light';
+    document.addEventListener('DOMContentLoaded', () => {
+        // Apply the saved theme on page load
+        const applyTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
             }
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                return 'dark';
-            }
-            return 'light';
-        })();
 
-        if (theme === 'light') {
-            document.documentElement.classList.remove('dark');
-        } else {
-            document.documentElement.classList.add('dark');
-        }
-
-        window.localStorage.setItem('theme', theme);
-
-        const handleToggleClick = () => {
-            const element = document.documentElement;
-            element.classList.toggle('dark');
-
-            const isDark = element.classList.contains('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            // Update the toggle icon
+            updateIcon(theme === 'dark');
         };
 
-        document.getElementById('theme-toggle')?.addEventListener('click', handleToggleClick);
-    });
-</script>
+        // Update the SVG icon based on the theme
+        const updateIcon = (isDark) => {
+            const icon = document.getElementById('theme-icon');
+            icon.innerHTML = isDark
+                ? '<circle cx="8" cy="8" r="8" fill="white"></circle>' // Dark mode icon (white filled dot)
+                : '<circle cx="8" cy="8" r="8" fill="black"></circle>'; // Light mode icon (black filled dot)
+        };
 
-<script>
-    document.addEventListener('astro:after-swap', () => {
-        if (localStorage.theme === 'dark') {
-            document.documentElement.classList.add('dark');
-        }
+        // Handle the toggle button click
+        const handleToggleClick = () => {
+            const root = document.documentElement;
+            const isDark = root.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon(isDark);
+        };
+
+        // Add event listener to the toggle button
+        document.getElementById('theme-toggle').addEventListener('click', handleToggleClick);
+
+        // Apply the initial theme
+        applyTheme();
     });
 </script>
